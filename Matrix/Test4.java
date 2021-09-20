@@ -1,9 +1,8 @@
 package Matrix;
 
 import java.io.IOException;
-import java.util.Arrays;
 
-public class Test3 {
+public class Test4 {
     public static void main(String[] args) throws IOException {
 
         int random1 = (int) (Math.random() * 100);
@@ -49,33 +48,8 @@ public class Test3 {
             }
             System.out.println();
 
+            System.out.println("Сортированный масив");
 
-        }
-
-        int temp = 0;
-
-
-                        for (int y = 0; y < matrix.length; y++) {
-                            for (int j = 0; j < matrix[y].length; j++) {
-                                for (int k = 0; k < matrix.length; k++) {
-                                    for (int n = 0; n < matrix[k].length; n++) {
-                                        if (matrix[k][n] > matrix[y][j]) {
-                                            temp = matrix[k][n];
-                                            matrix[k][n] = matrix[y][j];
-                                            matrix[y][j] = temp;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-        System.out.println("Отсортированный массив: ");
-        for (int y = 0; y < matrix.length; ++y) {
-            for (int j = 0; j < matrix[y].length; ++j) {
-                System.out.print(matrix[y][j] + " ");
-            }
-            System.out.println();
         }
     }
 }
-

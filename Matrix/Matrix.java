@@ -56,14 +56,14 @@ public class Matrix {
 
         int temp = 0;
 
-        for (int y = 0; y < matrix.length; y++) {
-            for (int j = 0; j < matrix[y].length; j++) {
+        for (int x = 0; x < matrix.length; x++) {
+            for (int y = 0; y < matrix[x].length; y++) {
                 for (int k = 0; k < matrix.length; k++) {
                     for (int n = 0; n < matrix[k].length; n++) {
-                        if (matrix[k][n] > matrix[y][j]) {
+                        if (matrix[k][n] > matrix[x][y]) {
                             temp = matrix[k][n];
-                            matrix[k][n] = matrix[y][j];
-                            matrix[y][j] = temp;
+                            matrix[k][n] = matrix[x][y];
+                            matrix[x][y] = temp;
                         }
                     }
                 }
@@ -71,9 +71,9 @@ public class Matrix {
         }
 
         System.out.println("Отсортированный массив: ");
-        for (int y = 0; y < matrix.length; ++y) {
-            for (int j = 0; j < matrix[y].length; ++j) {
-                System.out.print(matrix[y][j] + " ");
+        for (int x = 0; x < matrix.length; ++x) {
+            for (int y = 0; y < matrix[x].length; ++y) {
+                System.out.print(matrix[x][y] + " ");
             }
             System.out.println();
         }
